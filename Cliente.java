@@ -40,11 +40,8 @@ public class Cliente {
             return false;
         char c = novo_cpf.charAt(0);
         for (int i = 1; i < novo_cpf.length() - 1; i++) {
-            //char c = novo_cpf.charAt(i);
-            //if (i + 1 <= novo_cpf.length()) {
             if (c != novo_cpf.charAt(i + 1))
                 return verificadores_cpf(novo_cpf);
-            //}
         }
         return false;
     }
