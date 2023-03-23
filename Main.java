@@ -7,7 +7,7 @@ public class Main {
         Cliente cliente = new Cliente("Rafael de Almeida Casonato", "467.758.728-01", "31/12/1997", 25, "Avenida Érico Veríssimo");
         Veiculo veiculo = new Veiculo("HADA1291", "Buggati", "Chiron super sport");
         Sinistro sinistro = new Sinistro("22/03/2023", "Rua Roxo Moreira 1272");
-        Boolean validacao = cliente.validarCpf("467.758.728-01");
+        Boolean validacao = cliente.validarCpf(cliente.getCpf());
         System.out.print(cliente);
         System.out.print("Cpf válido? " + validacao);
         System.out.print("\n");
