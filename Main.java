@@ -12,5 +12,8 @@ public class Main {
         System.out.print("Cpf válido? " + validacao);
         System.out.print("\n");
         System.out.print("Id: " + sinistro.getId());
+        System.out.print("\n");
+        cliente.setNome("Homero Casonato");
+        System.out.print(cliente.getNome());
     }
 }
