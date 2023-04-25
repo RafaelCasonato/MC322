@@ -38,13 +38,13 @@ public class Seguradora {
     
         for (int i = 0; i < listaClientes.size(); i++) {
             try {
-                if (((ClientePF) listaClientes.get(i)).getCpf() == dado) {
+                if (((ClientePF) listaClientes.get(i)).getCpf().equals(dado)) {
                     removerTodosSinistros(listaClientes.get(i));
                     System.out.println("Cliente removido com sucesso!\n");
                     return listaClientes.remove(listaClientes.get(i));
                 }
             } catch (Exception e) {
-                if (((ClientePJ) listaClientes.get(i)).getCnpj() == dado) {
+                if (((ClientePJ) listaClientes.get(i)).getCnpj().equals(dado)) {
                     removerTodosSinistros(listaClientes.get(i));
                     System.out.println("Cliente removido com sucesso!\n");
                     return listaClientes.remove(listaClientes.get(i));

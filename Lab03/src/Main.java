@@ -80,7 +80,9 @@ public class Main {
         cliente1.adicionaVeiculo(veiculo1);
         cliente2.adicionaVeiculo(veiculo2);
         Sinistro sinistro = new Sinistro("07/10/2003", "Rua Minha Casa 02", seguradora, cliente1, veiculo1);
+        Sinistro sinistro2 = new Sinistro("07/10/2003", "Rua Minha Casa 03", seguradora, cliente2, veiculo2);
         seguradora.gerarSinistro(sinistro);
+        seguradora.gerarSinistro(sinistro2);
         System.out.println("\n############ LISTAR SINISTROS ############");
         seguradora.listarSinistros();
         System.out.println("############ VISUALIZAR SINISTRO ############");
@@ -90,9 +92,13 @@ public class Main {
         seguradora.removerCliente("467.758.728-01");
         System.out.println("############ MÉTODOS TO STRING ############");
         System.out.println(veiculo1);
+        System.out.println("###########################");
         System.out.println(cliente2);
+        System.out.println("###########################");
         System.out.println(seguradora);
+        System.out.println("###########################");
         System.out.println(sinistro);
+        System.out.println("###########################");
         System.out.println(cliente1);
     } 
 }
