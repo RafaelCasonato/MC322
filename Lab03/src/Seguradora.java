@@ -37,31 +37,21 @@ public class Seguradora {
             return false;
         }
     
-        String novoDado = dado.replaceAll("[^\\d]", "");
-        try {
-            if (novoDado.length() == 11) {
-            //O dado é um CPF e o cliente uma PF
-                for (int i = 0; i < listaClientes.size(); i++) {
-                    if (((ClientePF) listaClientes.get(i)).getCpf() == dado) {
-                        removerTodosSinistros(listaClientes.get(i));
-                        System.out.println("Cliente removido com sucesso!\n");
-                        return listaClientes.remove(listaClientes.get(i));
-                    }
+        for (int i = 0; i < listaClientes.size(); i++) {
+            try {
+                if (((ClientePF) listaClientes.get(i)).getCpf() == dado) {
+                    removerTodosSinistros(listaClientes.get(i));
+                    System.out.println("Cliente removido com sucesso!\n");
+                    return listaClientes.remove(listaClientes.get(i));
+                }
+            } catch (Exception e) {
+                if (((ClientePJ) listaClientes.get(i)).getCnpj() == dado) {
+                    removerTodosSinistros(listaClientes.get(i));
+                    System.out.println("Cliente removido com sucesso!\n");
+                    return listaClientes.remove(listaClientes.get(i));
                 }
             }
-            else if (novoDado.length() == 13) { 
-            //O dado é um CNPJ e o cliente uma PJ
-                for (int i = 0; i < listaClientes.size(); i++) {
-                    if (((ClientePJ) listaClientes.get(i)).getCnpj() == dado) {
-                        removerTodosSinistros(listaClientes.get(i));
-                        System.out.println("Cliente removido com sucesso!\n");
-                        return listaClientes.remove(listaClientes.get(i));
-                    }
-                }
-            }
-        } catch (Exception e) {
-            return false;
-        } 
+        }
         return false;
     }
 
