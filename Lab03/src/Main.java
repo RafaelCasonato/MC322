@@ -71,7 +71,7 @@ public class Main {
 
         System.out.println("\n############ TESTES ###############");
         Date data = formataData.parse("23/04/2023");
-        ClientePF cliente1 = new ClientePF("Rafael", "Rua UNICAMP", "Ensino médio completo", "Masculino", "Média-Alta", data, data,"467.758.728-01");
+        ClientePF cliente1 = new ClientePF("Rafael", "Rua UNICAMP", "Ensino médio completo", "Masculino", "Média-Alta", data, data, "467.758.728-01");
         ClientePJ cliente2 = new ClientePJ("Conpec", "Rua UNICAMP2", "66070178000117", data);
         seguradora.cadastrarCliente(cliente2);
         seguradora.cadastrarCliente(cliente1);

@@ -15,6 +15,7 @@ public class Seguradora {
     }
 
     public Boolean cadastrarCliente(Cliente cliente) {
+    /* Função que adiciona um cliente, PF ou PJ, na lista de clientes da seguradora. */
         if (listaClientes.contains(cliente) == true) {
             System.out.println("Cliente já cadastrado.\n");    
             return false;
@@ -29,6 +30,7 @@ public class Seguradora {
     }
 
     public Boolean removerCliente(String dado) {
+    /* Função que remove um cliente, PF ou PJ, e todos os seus sinistros das listas de clientes e sinistros da seguradora. */
         //remover a partir do cpf ou cnpj
         if (listaClientes.size() == 0) {
             System.out.println("Não existem clientes cadastrados.\n");
@@ -64,6 +66,7 @@ public class Seguradora {
     }
 
     public void listarClientes() {
+    /* Função que imprime todos os clientes e seus dados, PF ou PJ, da lista de clientes da seguradora. */
         for (int j = 0; j < listaClientes.size(); j++) {
             System.out.println(listaClientes.get(j));
             System.out.println("\n########################\n");
@@ -71,6 +74,7 @@ public class Seguradora {
     }
 
     public Boolean gerarSinistro(Sinistro sinistro) {
+    /* Função que adiciona um sinistro na lista de sinistros da seguradora. */
         if (listaSinistros.contains(sinistro) == true) {
             System.out.println("Sinistro já cadastrado.\n");    
             return false;
@@ -97,6 +101,7 @@ public class Seguradora {
     }
 
     public Boolean visualizarSinistro(Cliente cliente) {
+    /* Função que imprime todos os sinistros relacionados a um cliente, PF ou PJ. */
         try {
             Boolean visualizar = false;
             for (int i = 0; i < listaSinistros.size(); i++) {
@@ -112,6 +117,7 @@ public class Seguradora {
     }
 
     public void listarSinistros() {
+    /* Função que imprime todos os sinistros presentes na lista de sinistros da seguradora. */
         for (int j = 0; j < listaSinistros.size(); j++) {
             System.out.println("Data: ");
             System.out.println(listaSinistros.get(j).getData());
