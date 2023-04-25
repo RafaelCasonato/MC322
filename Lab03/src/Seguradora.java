@@ -31,7 +31,6 @@ public class Seguradora {
 
     public Boolean removerCliente(String dado) {
     /* Função que remove um cliente, PF ou PJ, e todos os seus sinistros das listas de clientes e sinistros da seguradora. */
-        //remover a partir do cpf ou cnpj
         if (listaClientes.size() == 0) {
             System.out.println("Não existem clientes cadastrados.\n");
             return false;
