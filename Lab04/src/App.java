@@ -267,14 +267,31 @@ public class App {
 		clientePF.listarVeiculos();
 		System.out.println("===================");
 
+        System.out.println(" Preço do Seguro ");
+		System.out.println("===================");
+		System.out.println(seguradora.calcularPrecoSeguroCliente("Clínica Casonato"));
+		System.out.println("===================");
+		clientePF.setValorSeguro(seguradora.calcularPrecoSeguroCliente("Clínica Casonato"));
+
+		System.out.println(" Preço do Seguro ");
+		System.out.println("===================");
+		System.out.println(seguradora.calcularPrecoSeguroCliente("Homero"));
+		clientePJ.setValorSeguro(seguradora.calcularPrecoSeguroCliente("Homero"));
+		System.out.println("===================");
+
+		System.out.println(" Calculo da receita da Seguradora");
+		System.out.println("===================");
+		System.out.println(seguradora.calcularReceita());
+		System.out.println("===================");
+
 		seguradora.gerarSinistro(new Sinistro(data, "Rua do Abacate Cozido", seguradora,
 				clientePF, hondaFit));
-		System.out.println(" Sinistro gerado no ClientePF ");
+		System.out.println(" Sinistro gerado para " + clientePF.getNome());
 		System.out.println("===================");
 
 		seguradora.gerarSinistro(new Sinistro(data2, "Rua do After", seguradora,
 				clientePJ, clientePJ.getVeiculo("FNC4596")));
-		System.out.println(" Sinistro gerado no ClientePF ");
+		System.out.println(" Sinistro gerado para " + clientePJ.getNome());
 		System.out.println("===================");
 
 		System.out.println(" Listar Clientes ");
@@ -290,23 +307,6 @@ public class App {
 		System.out.println(" Listar Sinistros ");
 		System.out.println("===================");
 		seguradora.listarSinistros();
-		System.out.println("===================");
-
-		System.out.println(" Calcula Preço Seguro ");
-		System.out.println("===================");
-		System.out.println(seguradora.calcularPrecoSeguroCliente(""));
-		System.out.println("===================");
-		clientePF.setValorSeguro(seguradora.calcularPrecoSeguroCliente(""));
-
-		System.out.println(" Calcula Preço Seguro ");
-		System.out.println("===================");
-		System.out.println(seguradora.calcularPrecoSeguroCliente(""));
-		clientePJ.setValorSeguro(seguradora.calcularPrecoSeguroCliente(""));
-		System.out.println("===================");
-
-		System.out.println(" Calcula receita ");
-		System.out.println("===================");
-		System.out.println(seguradora.calcularReceita());
 		System.out.println("===================");
 
         MenuOperacoes op;
