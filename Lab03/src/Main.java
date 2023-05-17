@@ -28,14 +28,14 @@ public class Main {
             System.out.println("\nData Nascimento (dd/MM/aaaa): ");
             String puraDataNascimento = input.nextLine();
             Date dataNascimento = formataData.parse(puraDataNascimento);
-            ClientePF clientePF = new ClientePF(nome, endereco, educacao, genero, classeEconomica, dataLicenca, dataNascimento, dado);
+            Cliente clientePF = new ClientePF(nome, endereco, educacao, genero, classeEconomica, dataLicenca, dataNascimento, dado);
             seguradora.cadastrarCliente(clientePF);
         }
         else if (dado.length() == 13) {
             System.out.println("\nData Fundação (dd/MM/aaaa): ");
             String puraDataFundacao = input.nextLine();
             Date dataFundacao = formataData.parse(puraDataFundacao);
-            ClientePJ clientePJ = new ClientePJ(nome, endereco, dado, dataFundacao);
+            Cliente clientePJ = new ClientePJ(nome, endereco, dado, dataFundacao);
             seguradora.cadastrarCliente(clientePJ);
         }
 
